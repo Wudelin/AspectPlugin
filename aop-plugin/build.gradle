@@ -1,0 +1,25 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+
+    implementation gradleApi()
+
+    implementation localGroovy()
+}
+
+repositories {
+    mavenCentral()
+}
+
+group='com.aop.plugin'
+version='1.0.0'
+
+// 打包的位置
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('../repos'))
+        }
+    }
+}

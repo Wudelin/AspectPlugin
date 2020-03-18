@@ -1,0 +1,3 @@
+rootProject.name='AspectPlugin'
+include ':aop-sample'
+include ':aop-plugin'
